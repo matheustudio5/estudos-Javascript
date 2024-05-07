@@ -10,16 +10,18 @@
     <p>Coloca sua velocidade aí rapaz</p>
     <input type="number" name="txtvel" id="txtvel">
     <input type="button" value="enviar" onclick="clicou()">
-    <p id="res"></p>
+    <p>Limite de velocidade <strong>60 KM/h</strong></p>
+    <p id="res">Dirija sempre com cuidado!</p>
 
     <script>
         function clicou(){
         var txt = document.getElementById('txtvel')
         var vel = Number(txt.value)
         var resp = document.getElementById('res')
-        resp.innerHTML = '<p>Dirija com cuidado Amigo</p>'
             if(vel > 60){
-                resp.innerHTML += 'Você está multado seu <strong>Bastardo!</strong>'
+                resp.innerHTML += ' <p>Você está multado seu <strong>Bastardo!</strong></p>'
+            }else{
+                resp.innerHTML +=  ' <p>Boa viagem amigo <strong>Amigo!</strong></p>'
             }
         }
           
