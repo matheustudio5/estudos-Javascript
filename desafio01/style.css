@@ -25,6 +25,7 @@ main{
 
 main > p{
     font-size: 1.3em;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
