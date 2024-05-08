@@ -7,6 +7,7 @@
 body{
     background-color: rgb(32, 111, 201);
     color: white;
+    text-align: center;
 }
 
 h1{
@@ -47,6 +48,5 @@ div{
 }
 
 p{
-    text-align: center;
     padding: 10px;
 }
