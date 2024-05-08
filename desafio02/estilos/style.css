@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(32, 111, 201);
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+main{
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: 12px;
+    width: 70vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.603);
+}
+
+main > p{
+    padding: 10px;
+}
+
+main > div > p{
+    padding: 10px;
+}
+
+main > div > img{
+    display: none;
+    width: 200px;
+    height: 200px;
+    border-radius:100%;
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}

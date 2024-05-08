@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <h1>Verificador de idade</h1>
@@ -12,9 +14,63 @@
         <p>Sexo: <input type="radio" name="sexo" id="sexo1">Masculino  <input type="radio" name="sexo" id="sexo2">Feminino</p>
         <p><input type="button" value="Verificar" onclick="clicou()"></p>
         <br>
-        <p id="res">Detectamos uma mulher de 19 anos</p>
-        <img src="" alt="">
-
+        <div>
+            <p id="res"></p>
+            <img src="" alt="" id="imagem">
+        </div>
     </main>
+
+    <script>
+        function clicou(){
+            var txtano = document.getElementById('ano')
+            var ano = Number(txtano.value)
+            var idade = 2024 - ano
+            var resp = document.getElementById('res')
+            var homem = document.getElementById('sexo1')
+            var mulher = document.getElementById('sexo2')
+            var imagem2 = document.getElementById('imagem')
+            if (homem.checked && idade < 13){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/baby-boy.jpg"
+            }else if(homem.checked && idade < 18){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/young-man.jpg"
+            }else if(homem.checked && idade < 60){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/man.jpg"
+            }else if(homem.checked && idade > 60){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/old-man.jpg"
+
+
+            }else if(mulher.checked && idade < 13){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/baby-girl.jpg"
+            }else if(mulher.checked && idade < 18){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/young-girl.jpg"
+            }else if(mulher.checked && idade < 60){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/woman.jpg"
+            }else if(mulher.checked && idade > 60){
+                resp.innerText = `Identificamos um homem de ${idade} anos`
+                imagem2.style.display = "inline"
+                imagem2.src = "imagens/old-woman.jpg"
+            }
+
+            if (ano > 2024 || ano < 1920){
+                window.alert('[ERRO] Digite um ano válido')
+                resp.innerHTML = ''
+                imagem2.style.display = 'none'
+            }
+        }
+    </script>
 </body>
 </html>
