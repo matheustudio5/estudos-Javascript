@@ -9,9 +9,29 @@
 <body>
     <h1>Hora do dia</h1>
     <main>
-        <p></p>
-        <img src="" alt="">
+        <p id="horas"></p>
+        <img src="imagens/manhã.jpg" alt="manhã linda" id="imagem">
     </main>
     <p>@matheus_cooper73</p>
+
+    <script>
+        var tempo = new Date()
+        var hora = tempo.getHours()
+        var minuto = tempo.getMinutes()
+        var resp = document.getElementById('horas')
+        resp.innerText = `Agora são ${hora}:${minuto}`
+        var imagem = document.getElementById('imagem')
+
+        if(hora < 12){
+            document.body.style.backgroundColor = 'rgb(155, 155, 102)'
+            imagem.src = 'imagens/manhã.jpg'
+        }else if(hora < 18){
+            document.body.style.backgroundColor = 'rgb(151, 99, 39)'
+            imagem.src = 'imagens/tarde.jpg'
+        }else{
+            document.body.style.backgroundColor = 'rgba(23, 24, 23, 0.692);'
+            imagem.src = 'imagens/noite.jpg'
+        }
+    </script>
 </body>
 </html>

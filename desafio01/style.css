@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+   background-color: rgba(23, 24, 23, 0.692);
+    color: white;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+main{
+    background-color: white;
+    color: black;
+    width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px black;
+}
+
+main > p{
+    font-size: 1.3em;
+    padding-bottom: 20px;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    padding-bottom: 20px;
+}
+
+p{
+    margin-top: 10px;
+}
