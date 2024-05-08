@@ -14,6 +14,7 @@ h1{
     margin: 10px 0px;
 }
 
+
 main{
     background-color: white;
     color: black;
@@ -26,6 +27,7 @@ main{
 
 main > p{
     padding: 10px;
+    text-align: left;
 }
 
 main > div > p{
@@ -42,4 +44,9 @@ main > div > img{
 
 div{
     text-align: center;
+}
+
+p{
+    text-align: center;
+    padding: 10px;
 }
